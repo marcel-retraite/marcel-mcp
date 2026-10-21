@@ -3,7 +3,7 @@
   "name": "fr.marcel-retraite/marcel",
   "title": "Marcel",
   "description": "Calcul fiscal et retraite français, déterministe et sourcé. Aucun conseil.",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "websiteUrl": "https://marcel-retraite.fr/developer",
   "repository": {
     "url": "https://github.com/marcel-retraite/marcel-mcp",

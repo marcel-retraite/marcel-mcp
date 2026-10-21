@@ -39,7 +39,7 @@ Server card : https://marcel-retraite.fr/.well-known/mcp/server-card.json
 | `simulate_dutreil` | Transmission d'entreprise : chemins avec et sans pacte Dutreil (CGI 787 B, 790) |
 | `acheter_louer` | Acheter ou louer sa résidence principale : écart de patrimoine dans le temps |
 | `simulate_cumul` | Cumul emploi-retraite d'un salarié du régime général, règles avant et à partir de 2027 |
-| `compare_certified` | Écart entre deux scénarios déjà calculés par Marcel |
+| `compare_results` | Écart entre deux scénarios déjà calculés par Marcel |
 | `validate_results` | Cohérence de plusieurs résultats Marcel entre eux |
 
 Règles en vigueur : LFSS 2026 (PFU 31,4 %, prélèvements sociaux 18,6 % ; assurance-vie à 17,2 %).
