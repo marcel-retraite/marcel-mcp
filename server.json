@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "fr.marcel-retraite/marcel",
+  "title": "Marcel",
+  "description": "Calcul fiscal et retraite français, déterministe et sourcé. Aucun conseil.",
+  "version": "1.2.0",
+  "websiteUrl": "https://marcel-retraite.fr/developer",
+  "repository": {
+    "url": "https://github.com/marcel-retraite/marcel-mcp",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://marcel-retraite.fr/mcp"
+    }
+  ]
+}
