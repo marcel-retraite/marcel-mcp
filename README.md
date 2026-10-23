@@ -26,6 +26,104 @@ Exemple de configuration (clients acceptant une URL distante) :
 
 Server card : https://marcel-retraite.fr/.well-known/mcp/server-card.json
 
+## Proxy local (stdio)
+
+Ce dépôt est un proxy léger, sans calcul et sans secret. Au démarrage, un serveur MCP stdio se connecte en Streamable HTTP à l'endpoint distant (par défaut `https://marcel-retraite.fr/mcp`, remplaçable avec `MARCEL_MCP_URL`) et relaie `tools/list` et `tools/call`. Les prompts et les ressources sont relayés seulement si le serveur distant les expose. Les résultats sont informatifs, pas un conseil.
+
+### npx
+
+Depuis GitHub, sans clone :
+
+```bash
+npx -y github:marcel-retraite/marcel-mcp
+```
+
+Exemple pour un client qui lance un processus :
+
+```json
+{
+  "mcpServers": {
+    "marcel": {
+      "command": "npx",
+      "args": ["-y", "github:marcel-retraite/marcel-mcp"],
+      "env": { "MARCEL_MCP_URL": "https://marcel-retraite.fr/mcp" }
+    }
+  }
+}
+```
+
+Depuis une copie locale du dépôt :
+
+```bash
+npm install
+npm run build
+npx .
+```
+
+`npm install` lance aussi la compilation. `node dist/index.js` démarre le même serveur. La sortie standard est réservée au protocole MCP.
+
+### Docker
+
+```bash
+docker build -t marcel-mcp .
+docker run -i --rm marcel-mcp
+```
+
+`-i` garde stdin ouvert. Pour viser un autre endpoint :
+
+```bash
+docker run -i --rm -e MARCEL_MCP_URL=https://marcel-retraite.fr/mcp marcel-mcp
+```
+
+## Local proxy (stdio)
+
+This repository is a thin proxy: no calculation logic and no secrets. On startup, a stdio MCP server connects with Streamable HTTP to the remote endpoint (default `https://marcel-retraite.fr/mcp`, override with `MARCEL_MCP_URL`) and forwards `tools/list` and `tools/call`. Prompts and resources are forwarded only when the remote server exposes them. Results are informative, not advice.
+
+### npx
+
+From GitHub, without cloning:
+
+```bash
+npx -y github:marcel-retraite/marcel-mcp
+```
+
+Example for a client that spawns a process:
+
+```json
+{
+  "mcpServers": {
+    "marcel": {
+      "command": "npx",
+      "args": ["-y", "github:marcel-retraite/marcel-mcp"],
+      "env": { "MARCEL_MCP_URL": "https://marcel-retraite.fr/mcp" }
+    }
+  }
+}
+```
+
+From a local checkout:
+
+```bash
+npm install
+npm run build
+npx .
+```
+
+`npm install` also builds. `node dist/index.js` starts the same server. Standard output is reserved for the MCP protocol.
+
+### Docker
+
+```bash
+docker build -t marcel-mcp .
+docker run -i --rm marcel-mcp
+```
+
+`-i` keeps stdin open. To target another endpoint:
+
+```bash
+docker run -i --rm -e MARCEL_MCP_URL=https://marcel-retraite.fr/mcp marcel-mcp
+```
+
 ## Outils (11, tous en lecture seule)
 
 | Outil | Ce qu'il calcule |
