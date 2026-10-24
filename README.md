@@ -2,6 +2,8 @@
 
 # Marcel — serveur MCP
 
+[![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/marcel-retraite/marcel-mcp)
+
 Calcul fiscal et retraite français, déterministe et sourcé. Chaque résultat porte les règles appliquées (articles du CGI, du CSS), leur version et un `traceId`. Marcel mesure : il ne donne aucun conseil en investissement ni conseil fiscal.
 
 French tax and retirement calculations for AI assistants. Deterministic, sourced, versioned. No financial advice.
