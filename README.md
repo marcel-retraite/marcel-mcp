@@ -45,7 +45,7 @@ Quatorze outils forment le périmètre principal. Les trente et un outils étend
 | `simulate_cumul` | Cumul emploi-retraite d'un salarié du régime général, règles avant et à partir de 2027 |
 | `compare_results` | Écart entre deux scénarios déjà calculés par Marcel |
 | `validate_results` | Cohérence de plusieurs résultats Marcel entre eux |
-| `optimiser_patrimoine` | Marcel Patrimoine compare des scénarios de donation ou de démembrement et chiffre leur effet fiscal. Estimation indicative, pas un conseil en investissement. Chaque champ du profil est optionnel ; la réponse contient les scénarios chiffrés, les scénarios écartés, les sujets non couverts, les champs manquants et les avertissements. Elle porte un traceId, le même pour un même profil et une même version de règles, et sa rulesVersion. |
+| `optimiser_patrimoine` | Marcel Patrimoine porte sur la transmission globale d'un patrimoine : donation, succession, démembrement et comparaison d'options, chiffrées à partir d'un même profil. Estimation indicative, pas un conseil en investissement. Entrées : âge et situation du foyer, enfants, plusieurs biens immobiliers avec leur crédit, titres de société, enveloppes d'épargne dont le PER, dettes, valeur à transmettre et donations antérieures. Chaque champ du profil est optionnel ; la réponse contient les scénarios chiffrés, les scénarios écartés, les sujets non couverts, les champs manquants et les avertissements. Elle porte un traceId, le même pour un même profil et une même version de règles, et sa rulesVersion. |
 
 ### Outils étendus (résultats indicatifs)
 
